@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="wrapper">
+    <div>
+        <img src="static/undraw_Goals_re_lu76.svg" alt="">
+    </div>
+    <div>
+        <h1>ThWr Tech</h1>
+        <p>Coming Soon</p>
+    </div>
+    <div  id="github">
+        <a href="#">Github</a>
+        <button id="switch" onclick="toggleTheme()">Theme</button>
+    </div>
+</div>
+<script>
+    // function to set a given theme/color-scheme
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-dark'){
+            setTheme('theme-light');
+        } else {
+            setTheme('theme-dark');
+        }
+    }
+    // Immediately invoked function to set the theme on initial load
+    (function () {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+            setTheme('theme-dark');
+        } else {
+            setTheme('theme-light');
+        }
+    })();
+</script>
+</body>
+</html>

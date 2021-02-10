@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.theme-light {
+  --color-primary: #0060df;
+  --color-secondary: #fbfbfe;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+}
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #33242f;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+#wrapper {
+  background: var(--color-secondary);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Lato', sans-serif;
+
+  div {
+    text-align: center;
+    color: var(--color-primary);
+    img {
+      max-width: 45vw;
+      margin: 0 auto;
+    }
+  }
+  #github {
+    margin: 10px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    place-self: center;
+    a, button {
+      padding: 8px;
+      background-color: rgba(72, 72, 72, 0.5);
+      border-radius: 8px;
+      text-decoration: none;
+      color: darkslategray;
+      box-shadow: none;
+    }
+  }
+}
